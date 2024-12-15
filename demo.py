@@ -25,6 +25,37 @@ param = {
     'Sample_cov': np.diag([0.2, 0.2, 0.2])   # covariance of initial sampling
 }
 
+section1_start = [0.0, 5.5, -1.57]
+section1_end = [0.0, -0.5, -1.57]
+section2_start = [0.0, -0.5, 0]
+section2_end = [10.0, -0.5, 0]
+section3_start = [10.0, -0.5, 1.57]
+section3_end = [10.0, 2.5, 1.57]
+section4_start = [10.0, 2.5, 2.676]
+section4_end = [7.0, 4.0, 2.676]
+section5_start = [7.0, 4.0, 0.46]
+section5_end = [10.0, 5.5, 0.46]
+section6_start = [10.0, 5.5, 1.57]
+section6_end = [10.0, 12.0, 1.57]
+section7_start = [10.0, 12.0, 0]
+section7_end = [21.0, 12.0, 0]
+section8_start = [21.0, 12.0, -1.57]
+section8_end = [21.0, 8.0, -1.57]
+section9_start = [21.0, 8.0, -1.95]
+section9_end = [19.0, 3.0, -1.95]
+section10_start = [19.0, 3.0, -1.57]
+section10_end = [19.0, -0.5, -1.57]
+section11_start = [19.0, -0.5, 0]
+section11_end = [31.0, -0.5, 0]
+section12_start = [31.0, -0.5, 1.57]
+section12_end = [31.0, 5.5, 1.57]
+
+path = np.array([section1_start, section1_end, section2_start, section2_end, section3_start, section3_end, section4_start,  \
+                section4_end, section5_start, section5_end, section6_start, section6_end, section7_start, section7_end, \
+                section8_start, section8_end, section9_start, section9_end, section10_start, section10_end, section11_start, \
+                section11_end, section12_start, section12_end])
+
+
 def main(filter="KF"):
     # initialize parameters    
     draw_KF = False

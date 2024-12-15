@@ -4,6 +4,11 @@ from pybullet_tools.utils import set_joint_positions, \
     wait_if_gui, wait_for_duration, get_collision_fn
 from pybullet_tools.pr2_utils import get_disabled_collisions
 import pybullet as p
+from collections import OrderedDict
+from collections.abc import MutableSet
+
+class OrderedSet(OrderedDict, MutableSet):
+    ...
 
 def load_env(env_file):
     # load robot and obstacles defined in a json file
@@ -37,6 +42,7 @@ def draw_sphere_marker(position, radius, color):
    vs_id = p.createVisualShape(p.GEOM_SPHERE, radius=radius, rgbaColor=color)
    marker_id = p.createMultiBody(basePosition=position, baseCollisionShapeIndex=-1, baseVisualShapeIndex=vs_id)
    return marker_id
+
 
 def draw_line(start, end, width, color):
     line_id = p.addUserDebugLine(start, end, color, width)
